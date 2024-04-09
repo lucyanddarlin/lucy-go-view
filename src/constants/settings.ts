@@ -1,4 +1,4 @@
-import { SettingStoreEnum, type SettingStoreType, ToolsStatusEnum } from '@/stores/modules/settingStore/SettingStore'
+import { SettingStoreEnum, type SettingStoreType, ToolsStatusEnum } from '@/stores/modules/settingStore/type'
 
 // 默认用户配置项
 export const defaultSystemSetting: SettingStoreType = {

@@ -14,18 +14,18 @@ export function createRouterGuard(router: Router) {
     loading && loading.start()
 
     const isErrorPage = router.getRoutes().findIndex((item) => item.name === to.name)
+    console.log(to.name, router.getRoutes(), isErrorPage)
 
     if (isErrorPage === -1) {
       next({ name: PageEnum.ERROR_PAGE_NAME_403 })
     }
 
-    // TODO: 暂无登录页面
-    // if (!loginCheck()) {
-    //   if (to.name === PageEnum.BASE_LOGIN_NAME) {
-    //     next()
-    //   }
-    //   next({ name: PageEnum.BASE_LOGIN_NAME })
-    // }
+    if (!loginCheck()) {
+      if (to.name === PageEnum.BASE_LOGIN_NAME) {
+        next()
+      }
+      next({ name: PageEnum.BASE_LOGIN_NAME })
+    }
 
     next()
   })

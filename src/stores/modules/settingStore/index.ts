@@ -3,7 +3,7 @@ import { computed, reactive } from 'vue'
 import { getLocalStorage, setLocalStorage } from '@/utils'
 import { StorageEnum } from '@/types/enums/StorageEnum'
 import { defaultSystemSetting } from '@/constants/settings'
-import { SettingStoreEnum, type SettingStoreType } from './SettingStore'
+import { SettingStoreEnum, type SettingStoreType } from './type'
 
 export const useSettingStore = defineStore('useSettingStore', () => {
   const settingObj = reactive<SettingStoreType>(

@@ -4,9 +4,14 @@ export enum PageEnum {
   BASE_LOGIN_NAME = 'Login',
 
   // 重定向
+  REDIRECT = '/redirect',
+  REDIRECT_NAME = 'Redirect',
+  RELOAD = '/reload',
   RELOAD_NAME = 'Reload',
 
   // 首页
+  BASE_HOME = '/project',
+  BASE_HOME_NAME = 'Project',
 
   // 项目
 
