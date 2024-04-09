@@ -24,7 +24,7 @@ export enum InteractEventsOn {
 }
 
 // 确定交互组件触发类型 key 名称
-export const component_interact_event_key = 'componentInteractEventKey'
+export const COMPONENT_INTERACT_EVENT_KEY = 'componentInteractEventKey'
 
 // 交互式组件的触发配置
 export type InteractActionsType = {

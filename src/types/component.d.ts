@@ -9,6 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     DialogContent: typeof import('./../components/Plugin/DialogContent/index.vue')['default']
     GoAppProvider: typeof import('./../components/GoAppProvider/index.vue')['default']
+    I18n: typeof import('./../components/I18n/index.vue')['default']
     LoadingContent: typeof import('./../components/Plugin/LoadingContent/index.vue')['default']
     MessageContent: typeof import('./../components/Plugin/MessageContent/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

@@ -5,7 +5,7 @@ export default sxzz(
     {
       rules: {
         'dot-notation': 'off',
-        'no-unused-vars': 'warn',
+        'no-unused-vars': 'off',
         'unused-imports/no-unused-vars': 'off',
         'require-await': 'off',
       },
