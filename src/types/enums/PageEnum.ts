@@ -4,6 +4,7 @@ export enum PageEnum {
   BASE_LOGIN_NAME = 'Login',
 
   // 重定向
+  RELOAD_NAME = 'Reload',
 
   // 首页
 

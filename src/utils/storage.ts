@@ -13,3 +13,16 @@ export const getLocalStorage = (key: string) => {
     return item
   }
 }
+
+/**
+ * 存储本地会话数据
+ * @param key
+ * @param value
+ */
+export const setLocalStorage = <T>(key: string, value: T) => {
+  try {
+    window.localStorage.setItem(key, JSON.stringify(value))
+  } catch (error) {
+    console.error('setItem Err', JSON.stringify(error))
+  }
+}

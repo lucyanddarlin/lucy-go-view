@@ -14,6 +14,7 @@ import router, { setupRouter } from './router'
 import '@/styles/pages/index.scss'
 // 引入动画
 import 'animate.css/animate.min.css'
+
 import { GoAppProvider } from './components/GoAppProvider'
 import { setupNaive } from './plugin/naive'
 import { setupDirectives } from './plugin/directives'

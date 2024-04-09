@@ -1,35 +1,35 @@
 import { createI18n } from 'vue-i18n'
 import { StorageEnum } from '@/types/enums/StorageEnum'
 import { getLocalStorage } from '@/utils'
-import { LangEnum } from '@/types/enums/StyleEnum'
-import { lang } from '@/constants/design'
+import { LocaleEnum } from '@/types/enums/StyleEnum'
+import { locale } from '@/constants/design'
 import zh from './zh'
 import en from './en'
-import type { LangListType, LangStateType } from '@/stores/modules/langStore'
+import type { LangListType, LangStateType } from '@/stores/modules/localeStore'
 
 // 当前语言
-const langStorage: LangStateType = getLocalStorage(StorageEnum.GO_LANG_STORE)
+const localeStorage: LangStateType = getLocalStorage(StorageEnum.GO_LOCALE_STORE)
 
 // 语言数组
 export const langList: LangListType[] = [
   {
     label: '中文',
-    key: LangEnum.ZH,
+    key: LocaleEnum.ZH,
   },
   {
     label: 'English',
-    key: LangEnum.EN,
+    key: LocaleEnum.EN,
   },
 ]
 
 const i18n = createI18n({
   legacy: false,
   globalInjection: true,
-  locale: langStorage.lang || lang,
-  fallbackLocale: langStorage.lang || lang,
+  locale: localeStorage?.locale || locale,
+  fallbackLocale: localeStorage?.locale || locale,
   messages: {
-    [LangEnum.ZH]: zh,
-    [LangEnum.EN]: en,
+    [LocaleEnum.ZH]: zh,
+    [LocaleEnum.EN]: en,
   },
 })
 

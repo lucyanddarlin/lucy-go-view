@@ -6,7 +6,7 @@ export enum StorageEnum {
   // 登录信息
   GO_LOGIN_INFO_STORE = 'GO_LOGIN_INFO',
   // 语言
-  GO_LANG_STORE = 'GO_LANG',
+  GO_LOCALE_STORE = 'GO_LOCALE',
   // 当前选择的主题
   GO_DESIGN_STORE = 'GO_DESIGN',
   // 工作台的布局配置

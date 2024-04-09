@@ -1,4 +1,4 @@
-import { LangEnum } from '@/types/enums/StyleEnum'
+import { LocaleEnum } from '@/types/enums/StyleEnum'
 
 /** 默认语言 */
-export const lang = LangEnum.ZH
+export const locale = LocaleEnum.EN

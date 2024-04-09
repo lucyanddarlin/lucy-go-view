@@ -5,7 +5,7 @@ export enum ThemeEnum {
 }
 
 // 语言
-export enum LangEnum {
+export enum LocaleEnum {
   ZH = 'ZH',
   EN = 'EN',
 }
