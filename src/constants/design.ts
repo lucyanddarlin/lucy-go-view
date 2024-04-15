@@ -16,4 +16,4 @@ export const defaultTheme = {
 export const borderRadius = '4px'
 
 // 轮播间隔
-export const carouselInterval = 4000
+export const carouselInterval = 400000

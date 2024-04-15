@@ -39,7 +39,7 @@ watch(
 <template>
   <!-- Button -->
   <NButton quaternary title="颜色" @click="modalVisible = true">
-    <NIcon>
+    <NIcon size="20">
       <ColorWandIcon />
     </NIcon>
   </NButton>

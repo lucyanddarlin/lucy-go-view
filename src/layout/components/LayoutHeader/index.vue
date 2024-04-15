@@ -4,7 +4,7 @@ import { NLayoutHeader, NSpace } from 'naive-ui'
 
 <template>
   <NLayoutHeader bordered class="go-layout-header">
-    <header class="grid grid-cols-3" :class="{ 'grid-cols-none': false }">
+    <header class="go-layout-header-box" :class="{ 'grid-cols-none': false }">
       <!-- left -->
       <div class="header-item justify-start">
         <NSpace>
@@ -32,8 +32,14 @@ import { NLayoutHeader, NSpace } from 'naive-ui'
 
 <style lang="scss" scoped>
 .go-layout-header {
+  &-box {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    height: 60px;
+    padding: 0 20px 0 60px;
+  }
   .header-item {
-    @apply h-60px min-w-520px flex items-center pr-20px pl-60px;
+    @apply min-w-520px flex items-center;
   }
 }
 </style>

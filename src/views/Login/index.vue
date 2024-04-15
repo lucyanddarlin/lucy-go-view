@@ -147,7 +147,7 @@ const handleLogin = async (e: Event) => {
     <div class="h-100vh w-100vw flex items-center justify-around -mt-60px">
       <!-- 轮播图 -->
       <div class="mt-100px min-w-500px w-30%">
-        <NCarousel autoplay dot-type="line" :interval="carouselInterval">
+        <NCarousel autoplay dot-type="line" :interval="Number(carouselInterval)">
           <img
             v-for="(item, i) in carouselImgList"
             :key="i"
@@ -157,7 +157,7 @@ const handleLogin = async (e: Event) => {
         </NCarousel>
       </div>
       <!-- 登录框 -->
-      <div class="mx-0 my-160px flex flex-col">
+      <div class="mx-160px my-0 flex flex-col">
         <div class="w-450px">
           <NCollapseTransition :appear="true" :show="show">
             <NCard class="go-login-card" title="login.desc">
@@ -232,5 +232,11 @@ const handleLogin = async (e: Event) => {
   @extend .go-background-filter;
   @include fetch-bg-color('filter-color');
   box-shadow: 0 0 20px 5px rgba(40, 40, 40, 0.3);
+}
+
+:deep(.n-carousel__slide--current) {
+  /* background-color: pink;
+  display: flex;
+  justify-content: 'center'; */
 }
 </style>
