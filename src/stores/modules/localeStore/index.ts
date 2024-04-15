@@ -5,13 +5,14 @@ import { StorageEnum } from '@/types/enums/StorageEnum'
 import { locale as lo } from '@/constants/design'
 import { useSettingStore } from '../settingStore'
 import type { LocaleEnum } from '@/types/enums/StyleEnum'
+import type { DropdownMixedOption } from 'naive-ui/es/dropdown/src/interface'
 
-export interface LangStateType {
+export interface LocaleStateType {
   // 当前语言
   locale: LocaleEnum
 }
 
-export interface LangListType {
+export interface LocaleListType {
   label: string
   key: LocaleEnum
 }
@@ -19,7 +20,7 @@ export interface LangListType {
 export const useLocaleStore = defineStore('useLocaleStore', () => {
   const { isChangeLocaleReload } = useSettingStore()
 
-  const localeObj = reactive<LangStateType>(getLocalStorage(StorageEnum.GO_LOCALE_STORE) || { locale: lo })
+  const localeObj = reactive<LocaleStateType>(getLocalStorage(StorageEnum.GO_LOCALE_STORE) || { locale: lo })
 
   const locale = computed<LocaleEnum>(() => {
     return localeObj.locale

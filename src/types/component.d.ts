@@ -7,9 +7,16 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    ColorList: typeof import('./../components/GoThemeColorSelector/components/ColorList.vue')['default']
+    ColorListItem: typeof import('./../components/GoThemeColorSelector/components/ColorListItem.vue')['default']
     DialogContent: typeof import('./../components/Plugin/DialogContent/index.vue')['default']
     GoAppProvider: typeof import('./../components/GoAppProvider/index.vue')['default']
+    GoLoading: typeof import('./../components/GoLoading/index.vue')['default']
+    GoLocaleSelector: typeof import('./../components/GoLocaleSelector/index.vue')['default']
+    GoThemeColorSelector: typeof import('./../components/GoThemeColorSelector/index.vue')['default']
+    GoThemeSelector: typeof import('./../components/GoThemeSelector/index.vue')['default']
     I18n: typeof import('./../components/I18n/index.vue')['default']
+    LayoutHeader: typeof import('./../layout/components/LayoutHeader/index.vue')['default']
     LoadingContent: typeof import('./../components/Plugin/LoadingContent/index.vue')['default']
     MessageContent: typeof import('./../components/Plugin/MessageContent/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

@@ -50,6 +50,7 @@
     "@types/ramda": "^0.29.12",
     "@types/three": "^0.163.0",
     "@unocss/reset": "^0.59.0",
+    "@unocss/transformer-directives": "^0.59.0",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vitejs/plugin-vue-jsx": "^3.1.0",
     "@vue/eslint-config-prettier": "^8.0.0",

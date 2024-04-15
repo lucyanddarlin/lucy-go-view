@@ -5,13 +5,13 @@ import { LocaleEnum } from '@/types/enums/StyleEnum'
 import { locale } from '@/constants/design'
 import zh from './zh'
 import en from './en'
-import type { LangListType, LangStateType } from '@/stores/modules/localeStore'
+import type { LocaleListType, LocaleStateType } from '@/stores/modules/localeStore'
 
 // 当前语言
-const localeStorage: LangStateType = getLocalStorage(StorageEnum.GO_LOCALE_STORE)
+const localeStorage: LocaleStateType = getLocalStorage(StorageEnum.GO_LOCALE_STORE)
 
 // 语言数组
-export const langList: LangListType[] = [
+export const localeList: LocaleListType[] = [
   {
     label: '中文',
     key: LocaleEnum.ZH,

@@ -10,6 +10,7 @@ $--color-text-2: #86909c;
 $--color-text-3: #c9cdd4;
 $--color-text-4: #f2f3f5;
 
+
 // 变亮值
 $--light-shallow: 2%;
 
@@ -30,7 +31,7 @@ $--color-light-bg-5-shallow: lighten($--color-light-bg-5, $--light-shallow);
 $--dark-shallow: 2%;
 
 // 黑色
-$--color-dark-bg: #000;
+$--color-dark-black: #000;
 $--color-dark-bg-1: #18181c;
 $--color-dark-bg-1-shallow: darken($--color-dark-bg-1, $--dark-shallow);
 $--color-dark-bg-2: #232324;
@@ -52,12 +53,11 @@ $--footer-height: 50px;
 $--filter-blur-base: blur(20px);
 // 毛玻璃
 $--filter-color-login-dark: rgba(35,35,36, 0.7);
-$--filter-color-login-dark-shallow: rgba(35,35,36,0.3);
-$--filter-color-login-light: rgba(240,240,240,0.7);
-$--filter-color-login-light-shallow: rgba(240,240,240,0.3);
+$--filter-color-login-dark-shallow: rgba(35,35,36, 0.3);
+$--filter-color-login-light: rgba(240, 240, 240, 0.7);
+$--filter-color-login-light-shallow: rgba(240, 240, 240, 0.3);
 
 // 边框
 $--border-radius-base: 8px;
 // 阴影
-$--border-shadow: 0 8px 20px rgba(0,0,0,0.15);
-
+$--border-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);

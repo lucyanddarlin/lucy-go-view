@@ -8,6 +8,7 @@ export default sxzz(
         'no-unused-vars': 'off',
         'unused-imports/no-unused-vars': 'off',
         'require-await': 'off',
+        'vue/html-self-closing': 'off',
       },
     },
   ],

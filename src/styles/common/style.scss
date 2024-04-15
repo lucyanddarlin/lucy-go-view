@@ -1,2 +1,19 @@
 @import "./var.scss";
 @import "./format.scss";
+@import "./animation.scss";
+@import "./mixins/mixins.scss";
+
+
+// 毛玻璃
+.go-background-filter {
+  backdrop-filter: $--filter-blur-base;
+  @include fetch-bg-color("filter-color");
+  box-shadow: $--border-shadow;
+}
+
+// 毛玻璃 (带有阴影)
+.go-background-filter-shallow {
+  backdrop-filter: $--filter-blur-base;
+  @include fetch-bg-color("filter-color-shallow");
+  box-shadow: $--border-shadow;
+}

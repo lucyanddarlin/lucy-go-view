@@ -16,10 +16,11 @@ import '@/styles/pages/index.scss'
 import 'animate.css/animate.min.css'
 
 import { GoAppProvider } from './components/GoAppProvider'
-import { setupNaive } from './plugin/naive'
-import { setupDirectives } from './plugin/directives'
+import { setupDirectives, setupNaive } from './plugin'
 import { setupStore } from './stores'
 import i18n from './i18n'
+import { setHtmlTheme } from './utils/style'
+import { ThemeEnum } from './types/enums/StyleEnum'
 
 // 注册图标
 addCollection(uimIcons)
@@ -51,6 +52,7 @@ async function AppInit() {
   await router.isReady()
 
   // Store 准备就绪后处理主题色
+  setHtmlTheme(ThemeEnum.DARK)
 
   // 注册语言
   app.use(i18n)
