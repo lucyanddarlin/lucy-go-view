@@ -104,7 +104,7 @@ const handleLogin = async (e: Event) => {
           }),
         ),
       )
-      // mock
+      // TODO: mock
       setTimeout(() => {
         window['$message'].success('login.login_success')
         loading.value = false
@@ -122,9 +122,9 @@ const handleLogin = async (e: Event) => {
     <!-- 背景 -->
     <div class="go-login-container-bg fixed z-0 h-100vh w-100vw flex items-center justify-around">
       <!-- 占位 -->
-      <aside class="w-30%" />
+      <aside class="w-30% !hidden xl:!block" />
       <!-- 右侧轮播图片 -->
-      <aside class="w-770px flex flex-wrap -mr-20px">
+      <aside class="w-770px flex-wrap -mr-20px !hidden xl:!flex">
         <transition-group name="list-complete">
           <template v-for="item in bgList" :key="item">
             <div class="list-complete-item">
@@ -146,7 +146,7 @@ const handleLogin = async (e: Event) => {
     <!-- 登录内容 -->
     <div class="h-100vh w-100vw flex items-center justify-around -mt-60px">
       <!-- 轮播图 -->
-      <div class="mt-100px min-w-500px w-30%">
+      <div class="mt-100px min-w-500px w-30% !hidden xl:!block">
         <NCarousel autoplay dot-type="line" :interval="Number(carouselInterval)">
           <img
             v-for="(item, i) in carouselImgList"
@@ -232,11 +232,5 @@ const handleLogin = async (e: Event) => {
   @extend .go-background-filter;
   @include fetch-bg-color('filter-color');
   box-shadow: 0 0 20px 5px rgba(40, 40, 40, 0.3);
-}
-
-:deep(.n-carousel__slide--current) {
-  /* background-color: pink;
-  display: flex;
-  justify-content: 'center'; */
 }
 </style>

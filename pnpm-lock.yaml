@@ -106,9 +106,6 @@ devDependencies:
   '@types/three':
     specifier: ^0.163.0
     version: 0.163.0
-  '@unocss/reset':
-    specifier: ^0.59.0
-    version: 0.59.0
   '@unocss/transformer-directives':
     specifier: ^0.59.0
     version: 0.59.0

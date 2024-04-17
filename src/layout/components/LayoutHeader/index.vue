@@ -39,7 +39,7 @@ import { NLayoutHeader, NSpace } from 'naive-ui'
     padding: 0 20px 0 60px;
   }
   .header-item {
-    @apply min-w-520px flex items-center;
+    @apply flex items-center;
   }
 }
 </style>

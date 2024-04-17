@@ -13,3 +13,8 @@
     background-color: #18181c;
   }
 }
+
+button, [type='button'], [type='reset'], [type='submit'] {
+  // background-color: pink !important;
+  background-image: none !important;
+}

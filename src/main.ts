@@ -5,7 +5,7 @@ import lineMdIcons from '@iconify/json/json/line-md.json'
 import wiIcons from '@iconify/json/json/wi.json'
 
 import 'virtual:uno.css'
-import '@unocss/reset/tailwind.css'
+import '@/styles/pages/reset.css'
 
 import App from './App.vue'
 import router, { setupRouter } from './router'
