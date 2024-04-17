@@ -160,7 +160,7 @@ const handleLogin = async (e: Event) => {
       <div class="mx-160px my-0 flex flex-col">
         <div class="w-450px">
           <NCollapseTransition :appear="true" :show="show">
-            <NCard class="go-login-card" title="login.desc">
+            <NCard class="go-login-card" :title="t('login.desc')">
               <div class="mb-20px h-210px go-flex-center pt-10px">
                 <img class="" src="~@/assets/images/login/input.png" />
               </div>
@@ -198,12 +198,12 @@ const handleLogin = async (e: Event) => {
                 </NFormItem>
                 <NFormItem>
                   <div class="flex justify-between">
-                    <NCheckbox v-model:checked="autoLogin">{{ 'login.form_auto' }}</NCheckbox>
+                    <NCheckbox v-model:checked="autoLogin">{{ t('login.form_auto') }}</NCheckbox>
                   </div>
                 </NFormItem>
                 <NFormItem>
                   <NButton type="primary" size="large" block :loading="loading" @click="handleLogin">
-                    {{ 'login.form_button' }}
+                    {{ t('login.form_button') }}
                   </NButton>
                 </NFormItem>
               </NForm>
