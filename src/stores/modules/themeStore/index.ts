@@ -2,22 +2,24 @@ import { defineStore } from 'pinia'
 import { computed, reactive } from 'vue'
 import { defaultTheme } from '@/constants/design'
 import { ThemeEnum } from '@/types/enums/StyleEnum'
-import { setLocalStorage } from '@/utils'
+import { getLocalStorage, setLocalStorage } from '@/utils'
 import { StorageEnum } from '@/types/enums/StorageEnum'
 import type { AppThemeColorType, ThemeStateType } from './type'
 
 const { isDarkTheme: darkTheme, appTheme, appThemeDetail: themeDetail } = defaultTheme
 
 export const useThemeStore = defineStore('useThemeStore', () => {
-  const themeObj = reactive<ThemeStateType>({
-    // 是否暗黑
-    isDarkTheme: darkTheme,
-    // 主题名称
-    themeName: darkTheme ? ThemeEnum.DARK : ThemeEnum.LIGHT,
-    // 主题色
-    appTheme,
-    appThemeDetail: themeDetail,
-  })
+  const themeObj = reactive<ThemeStateType>(
+    getLocalStorage(StorageEnum.GO_DESIGN_STORE) || {
+      // 是否暗黑
+      isDarkTheme: darkTheme,
+      // 主题名称
+      themeName: darkTheme ? ThemeEnum.DARK : ThemeEnum.LIGHT,
+      // 主题色
+      appTheme,
+      appThemeDetail: themeDetail,
+    },
+  )
 
   const isDarkTheme = computed(() => themeObj.isDarkTheme)
   const themeName = computed(() => themeObj.themeName)
